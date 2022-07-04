@@ -32,13 +32,13 @@
       </v-btn>
 
       <!-- SendReport -->
-      <v-btn
+      <!-- <v-btn
         class="ma-2"
         target="_blank"
         @click="sendReport()"
         v-if="store.state.logExists"
         >{{ $t("sendReport") }}
-      </v-btn>
+      </v-btn> -->
     </v-sheet>
   </v-bottom-sheet>
 </template>

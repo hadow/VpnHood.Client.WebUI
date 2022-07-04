@@ -41,7 +41,7 @@
 
       <!-- Feedback -->
       <v-list-item
-        href="https://docs.google.com/forms/d/e/1FAIpQLSd5AQesTSbDo23_4CkNiKmSPtPBaZIuFjAFnjqLo6XGKG5gyg/viewform?usp=sf_link"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfyoZ4MHJhFTDtPYmaWcENRSZDb9L-MWPvmQIY0OdsMeq6WXQ/viewform?usp=pp_url"
         target="_blank"
       >
         <v-list-item-action>
@@ -52,7 +52,7 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-divider></v-divider>
+      <!-- <v-divider></v-divider>
       <v-list-item
        href="https://github.com/vpnhood/VpnHood/wiki/VpnHood-Access-Server"
         target="_blank">
@@ -64,7 +64,7 @@
             {{ this.$t("createServer") }}
           </v-list-item-title>
         </v-list-item-content>
-      </v-list-item>
+      </v-list-item> -->
 
       <v-divider></v-divider>
       <v-list-item>

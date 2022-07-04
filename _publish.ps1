@@ -1,10 +1,10 @@
-$solutionDir = Join-Path -Path (Split-Path -parent $PSScriptRoot) -ChildPath "VpnHood";
+$solutionDir = Join-Path -Path (Split-Path -parent $PSScriptRoot) -ChildPath "WFVPN";
 
 . "$solutionDir\pub\Common.ps1";
 
 $distDir= "$PSScriptRoot\dist";
-$dest1= "$solutionDir\VpnHood.Client.App.Android\Assets\SPA.zip";
-$dest2= "$solutionDir\VpnHood.Client.App.Win\Resources\SPA.zip";
+$dest1= "$solutionDir\WFVPN.Client.Xamarin.Android\Assets\SPA.zip";
+$dest2= "$solutionDir\WFVPN.Client.App.Win\Resources\SPA.zip";
 
 # build output
 # ./_publish.bat

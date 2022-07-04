@@ -50,7 +50,7 @@ export default {
   data: () => ({
     accessKeyValue: null,
     accessKeyErrorMessage: null,
-    accessKeyPrefix: "vh://"
+    accessKeyPrefix: "wf://"
   }),
   watch:
   {
@@ -108,7 +108,7 @@ export default {
     validateAccessKey(accessKey) {
       try {
         accessKey = accessKey.trim();
-        if (accessKey.indexOf("vh://") == 0) accessKey = accessKey.substr(5);
+        if (accessKey.indexOf("wf://") == 0) accessKey = accessKey.substr(5);
         const json = Base64.decode(accessKey);
         return JSON.parse(json) != null;
       }

@@ -51,11 +51,17 @@
               />
               <v-list-item-subtitle
                 v-text="
-                  store.clientProfile.ip(item.clientProfile.clientProfileId)
+                  store.clientProfile.hostName(item.clientProfile.clientProfileId)
                 "
               />
+              
             </v-list-item-content>
-
+            <v-img
+              :src="store.getIpGroupImageUrl(store.clientProfile.ipGroup(item.clientProfile.clientProfileId))"
+              max-height="24"
+              max-width="24"
+              class="ma-1"
+              />
             <v-list-item-action>
               <!-- Menu -->
               <ContextMenu

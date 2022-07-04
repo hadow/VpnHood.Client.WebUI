@@ -14,7 +14,7 @@
         <v-card-text>
           <strong>{{ $t("warning") }}! {{ $t("privacyWarning") }}</strong>
           <br />
-          <a href="https://www.vpnhood.com/privacy-policy" target="_blank">{{
+          <a href="https://www.hadow.xyz/privacy-policy" target="_blank">{{
             $t("readPrivacyPolicy")
           }}</a>
         </v-card-text>
@@ -147,6 +147,9 @@
         <div class="my-card-view">
           <!-- *** ipFilter *** -->
           <v-btn
+            v-if="
+              store.features.isSupportTunnelMyCountry
+            "
             depressed
             block
             class="config-btn mb-2"
@@ -158,7 +161,7 @@
             <span class="config">{{ this.clientCountryFilterStatus }}</span>
             <v-img
               v-if="!store.userSettings.tunnelClientCountry"
-              :src="store.getIpGroupImageUrl(store.state.clientIpGroup)"
+              :src="store.getIpGroupImageUrl(store.state.clientIpGroup.ipGroupId)"
               max-width="24"
               class="ma-1"
             />
@@ -200,6 +203,11 @@
             <span class="config-label">{{ $t("selectedServer") }}</span>
             <v-icon class="config-arrow" flat>keyboard_arrow_right</v-icon>
             <span class="config">{{ store.clientProfile.name("$") }}</span>
+            <v-img
+              :src="store.getIpGroupImageUrl(store.clientProfile.ipGroup('$'))"
+              max-width="24"
+              class="ma-1"
+            />
           </v-btn>
         </div>
       </v-col>

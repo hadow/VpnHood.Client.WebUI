@@ -53,7 +53,7 @@
               @click:close="updateItem(data.item.ipGroupId, false)"
             >
               <v-img
-                :src="store.getIpGroupImageUrl(data.item)"
+                :src="store.getIpGroupImageUrl(data.item.ipGroupId)"
                 max-width="24"
                 class="ma-1"
               />
@@ -63,7 +63,7 @@
           <template v-slot:item="data">
             <template>
               <v-img
-                :src="store.getIpGroupImageUrl(data.item)"
+                :src="store.getIpGroupImageUrl(data.item.ipGroupId)"
                 max-width="24"
                 class="ma-1"
               />

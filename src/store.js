@@ -5,7 +5,7 @@ import clientProfile from './clientProfile';
 export default {
     newVersion: null,
     cultures: [
-        { value: "en", isRtl: false, name: "English", nativeName: "English" },
+        { value: "zh", isRtl: false, name: "China", nativeName: "China" },
     ],
     title: i18n.t('appName'),
     serverUrl: process.env.NODE_ENV === 'development' ? "http://127.0.0.1:9090" : window.location.origin,
@@ -72,11 +72,11 @@ export default {
         }
     },
 
-    getIpGroupImageUrl(ipGroup) {
+    getIpGroupImageUrl(ipGroupId) {
         try {
-          if (ipGroup.ipGroupId.toLowerCase() == "custom")
+          if (ipGroupId.toLowerCase() == "custom")
             return require(`@/assets/images/custom_flag.png`);
-          return require(`@/assets/images/country_flags/${ipGroup.ipGroupId}.png`);
+          return require(`@/assets/images/country_flags/${ipGroupId}.png`);
         }
         catch
         {

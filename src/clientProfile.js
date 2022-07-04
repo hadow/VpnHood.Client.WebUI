@@ -60,6 +60,25 @@ export default {
         return token && token.isv ? `${token.hname}:${token.hport}` : endPoints;
     },
 
+    hostName(clientProfileId){
+
+        clientProfileId = this.updateId(clientProfileId);
+
+        let clientProfileItem = this.item(clientProfileId);
+        let token = clientProfileItem.token;
+        //var endPoints = token.ep!=null ? token.ep.join(",") : null;
+        //return token && token.isv ? `${token.hname}:${token.hport}` : endPoints;
+        return `${token.hname}:${token.hport}`
+    },
+
+    ipGroup(clientProfileId){
+
+        clientProfileId = this.updateId(clientProfileId);
+        let clientProfileItem = this.item(clientProfileId);
+        let token = clientProfileItem.token;
+        return token.ipgroup;
+    },
+
     isDefault(clientProfileId) {
         let defaultProfile = this.defaultProfile();
         return defaultProfile && defaultProfile.clientProfileId == clientProfileId;
