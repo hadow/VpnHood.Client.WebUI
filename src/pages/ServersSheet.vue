@@ -56,12 +56,19 @@
               />
               
             </v-list-item-content>
-            <v-img
-              :src="store.getIpGroupImageUrl(store.clientProfile.ipGroup(item.clientProfile.clientProfileId))"
-              max-height="24"
-              max-width="24"
-              class="ma-1"
-              />
+            
+            <v-list-item-content>
+                <v-img
+                  :src="store.getIpGroupImageUrl(store.clientProfile.ipGroup(item.clientProfile.clientProfileId))"
+                  max-height="24"
+                  max-width="24"
+                  class="ma-1"
+                />
+                <v-list-item-title
+                  v-text="$t(store.clientProfile.ipGroup(item.clientProfile.clientProfileId))"
+                />
+            </v-list-item-content>
+             
             <v-list-item-action>
               <!-- Menu -->
               <ContextMenu

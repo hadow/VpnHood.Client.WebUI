@@ -185,6 +185,8 @@ const messages = {
         tunnel_mycountry_desc: "您是否想对在您所在国家/地区托管的流量进行隧道传输?",
         tunnel_mycountry_on: "是的，托管所有流量，包括我的国家 (慢).",
         tunnel_mycountry_off: "不，不要从我所在国家/地区的服务器传输流量 (快).",
+        us:"美国",
+        tw:"台湾",
     },
 };
 
