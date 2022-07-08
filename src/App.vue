@@ -33,7 +33,7 @@
           @click.stop="store.navigationDrawer = !store.navigationDrawer"
       />
       <v-img
-          v-if="0"
+          v-if="1"
           class="mx-2"
           src="@/assets/images/logo-small.png"
           :alt="$t('appName')"
