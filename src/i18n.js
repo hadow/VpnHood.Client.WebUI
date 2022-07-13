@@ -187,6 +187,8 @@ const messages = {
         tunnel_mycountry_off: "不，不要从我所在国家/地区的服务器传输流量 (快).",
         us:"美国",
         tw:"台湾",
+        usedTraffic:"已使用",
+        maxTraffic:"最大"
     },
 };
 

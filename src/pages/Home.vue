@@ -77,11 +77,11 @@
                   v-if="connectionState == 'Connected' && this.bandwidthUsage()"
                 >
                   <div id="bandwidthUsage">
-                    <span>{{ this.bandwidthUsage().used }} of</span>
+                    <span>{{ this.bandwidthUsage().used }}/{{this.bandwidthUsage().total}}</span>
                   </div>
-                  <div id="bandwithTotal" v-if="connectionState == 'Connected'">
+                  <!-- <div id="bandwithTotal" v-if="connectionState == 'Connected'">
                     <span>{{ this.bandwidthUsage().total }}</span>
-                  </div>
+                  </div> -->
                 </div>
 
                 <!-- check -->
@@ -330,10 +330,10 @@ export default {
       let mb = 1000000;
       let gb = 1000 * mb;
 
-      let ret = { used: accessUsage.sentTraffic + accessUsage.receivedTraffic, total: accessUsage.maxTraffic };
+      let ret = { used: accessUsage.sentTraffic + accessUsage.receivedTraffic, total: accessUsage.maxTraffic*gb };
       // let ret = { used: 100 * mb, total: 2000 * mb };
 
-      if (ret.total > 1000 * mb) {
+      if (ret.total > gb) {
         ret.used = (ret.used / gb).toFixed(0) + "GB";
         ret.total = (ret.total / gb) + "GB";
       }

@@ -27,7 +27,7 @@
 
       <v-divider></v-divider>
       <!-- News -->
-      <v-list-item
+      <!-- <v-list-item
         href="https://github.com/vpnhood/VpnHood/blob/main/CHANGELOG.md"
         target="_blank"
       >
@@ -37,7 +37,7 @@
         <v-list-item-content>
           <v-list-item-title>{{ this.$t("changelog") }}</v-list-item-title>
         </v-list-item-content>
-      </v-list-item>
+      </v-list-item> -->
 
       <!-- Feedback -->
       <v-list-item
